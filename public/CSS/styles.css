@@ -1,0 +1,446 @@
+/* Comments in this document will explain styling that we believe to be important, therefore we will
+not explain individual positioning or styling e.t.c and only explain sections that we think need
+explaining or justification */
+
+/* the font we have chosen for this website is Arial due to it being easily recognisable
+    and nice to look at. It is also recommended as a good font to use to help those with dyslexia. */
+
+* {
+    font-family: "Arial";
+    box-sizing: border-box;
+}
+
+html {
+    position: absolute;
+    clear: both;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+/* the colour scheme we have chosen for this website is a pastel scheme, with the header and footer
+                        using a pastel blue colour, and the navigation bar using black and pastel pink.
+                        We chose this scheme because we feel that it is welcoming and also stylish. */
+
+body {
+    background-color: #FDFDFC;
+    min-height: 100%;
+    margin: auto;
+}
+
+div h1 {
+    text-align: center;
+}
+
+#mainBody {
+    background-image: url('../images/17fatbooks-superJumbo.png');
+    height: 84%;
+}
+
+/* ------------------------------------------------ */
+
+/*HEADER*/
+
+/* colour for the whole header and footer; beige */
+
+header, footer {
+    background-color: #757194;
+}
+
+header {
+    height: 125px;
+    top: -10px;
+    color: #757194;
+}
+
+/* empty div; adds more space in the header */
+
+.title {
+    height: 5px;
+}
+
+/* logo styling; sets position to the top left of the page and in the header; */
+
+.logo, .logo img {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: 125px;
+}
+
+/* searchBar styling; positioned in top-right of page */
+
+.searchBar {
+    position: relative;
+    width: 615px;
+    height: 420px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 200px;
+    border: none;
+    font-size: 20px;
+}
+
+.searchBar div {
+    display: inline-block;
+    height: 75px;
+    border-style: solid;
+    margin-top: -20px;
+    margin-right: 10px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.searchBar input[type=text] {
+    padding: 6px;
+    height: 70px;
+    width: 550px;
+}
+
+.searchBar input[type=image] {
+    float: right;
+    width: 50px;
+    height: 70px;
+}
+
+/* basket that sits in the top right of the page */
+
+.headerBasket {
+    position: absolute;
+    width: 170px;
+    height: 100px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.headerBasket a {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.headerBasket img {
+    width: 35px;
+    height: 35px;
+    margin-top: -10px;
+}
+
+/* navigation bar styling; position is middle of the header */
+
+.navBar {
+    margin-top: 20px;
+    padding: 13px;
+    text-align: center;
+}
+
+.navBar .home {
+    border-style: none;
+}
+
+.navBar a {
+    color: black;
+    margin-left: -2px;
+    padding: 10px;
+    border-left-style: solid;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* navigation bar icons styling; positioned to the right of their respective links */
+
+.navBar img {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin-left: 5px;
+    margin-top: 4px;
+    top: 5px;
+    text-align: center;
+}
+
+.navBar a:visited {
+    color: black;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    color: blue;
+    text-decoration: none;
+}
+
+/* .current changes the colour of the background on the 
+                    navigation bar for the page that the user is currently on; */
+
+.current {
+    background-color: #e8d1d1;
+    border-style: solid;
+}
+
+/* visibility styling for login popup error */
+
+#loginError .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* ------------------------------------------------ */
+
+/* FOOTER */
+
+/* footer styling; footer stays at the bottom of the screen at all times,
+                    regardless of how much content there is on the page */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    clear: both;
+    width: 100%;
+    height: 6%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+
+/* universal font-size for the footer */
+
+footer p, a {
+    font-size: 14px;
+}
+
+/* policies section in the footer; contains privacy policy, sitemap and copyright info */
+
+.policies {
+    position: absolute;
+    width: 25%;
+    left: 37.5%;
+    bottom: 12px;
+    padding: 0px;
+    border-style: solid;
+    text-align: center;
+}
+
+.policies p {
+    margin: auto;
+    display: inline-block;
+    padding-right: 20px;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* ------------------------------------------------ */
+
+/* INDEX PAGE */
+
+/* styling for popular brands section on home page */
+
+.popBrands {
+    position: relative;
+    width: 1100px;
+    font-size: 40px;
+    left: 350px;
+    margin-bottom: 100px;
+}
+
+.popBrands img {
+    width: 150px;
+    margin-right: 50px;
+}
+
+/* ------------------------------------------------ */
+
+/* PRODUCTS PAGE */
+
+/* banner that sits at the top of the shop page */
+
+.shopBanner {
+    text-align: center;
+    color: white;
+    width: 910px;
+    background-image: url("../images/productBackground.png");
+    opacity: 0.9;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* sort options which sits above the products */
+
+.sort {
+    text-align: center;
+    width: 500px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-color: grey;
+}
+
+.sort button {
+    font-size: 20px;
+    border-radius: 5px;
+    margin-right: 40px;
+    margin-left: 40px;
+    width: 150px;
+    height: 30px;
+}
+
+.sort p {
+    font-size: 30px;
+}
+
+/* products; organised by columns and rows */
+
+.products, .recommendations {
+    position: relative;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 20px;
+}
+
+.recommendations {
+    padding: 20px;
+    border-style: solid;
+    height: 400px;
+    margin-top: 100px;
+}
+
+.recommendations #recommendText {
+    font-size: 25px;
+}
+
+.recommendations .column {
+    width: 20%
+}
+
+.column img {
+    width: 100%;
+}
+
+.row {
+    clear: both;
+    width: 1200px;
+}
+
+.products .productBasket {
+    width: 35px;
+    height: 35px;
+    float: right;
+}
+
+.recommendations .productBasket {
+    width: 35px;
+    height: 35px;
+    float: right;
+}
+
+.popup {
+    position: absolute;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+
+.popup .feedback {
+    visibility: hidden;
+    width: 143px;
+    background-color: rgb(235, 63, 63);
+    font-size: 10px;
+    border-color: red;
+    text-align: center;
+    border-radius: 3px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    left: 230px;
+    margin-left: -80px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+/* Popup arrow */
+
+.popup .feedback::after {
+    content: "";
+    position: absolute;
+    top: -9px;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: red transparent transparent transparent;
+    transform: rotate(-180deg);
+}
+
+.popup #passwordError {
+    left: 100px;
+    top: 20px;
+    width: 190px;
+}
+
+.popup #loginError {
+    position: absolute;
+    left: -10px;
+    top: 53px;
+}
+
+.popup p {
+    position: relative;
+    height: inherit;
+    margin-top: -3px;
+    margin: 4px;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+
+.popup .show {
+    visibility: visible;
+    margin-bottom: 10px;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+.success {
+    width: 600px;
+    visibility: hidden;
+    position: absolute;
+    font-size: 32px;
+    text-align: center;
+    top: 250px;
+    left: 452px
+}
+
+#successMessage a {
+    font-size: 32px;
+}
+
+.success .show {
+    visibility: visible;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.recommendations.hide {
+    visibility: hidden;
+    position: absolute;
+}

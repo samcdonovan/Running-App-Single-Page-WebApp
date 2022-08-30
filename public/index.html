@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Home</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <script src="client.js"></script>
+</head>
+<header>
+
+    <div class="logo">
+        <img src="../images/logo.png" alt="LOGO">
+    </div>
+    <div class="navBar">
+        <button class="home" onclick="homeButton()">Home <img src="../images/home.png" alt="HOME"></button>
+        <button class="exercise" onclick="exerciseButton()">Exercise<img src="../images/exercise.png"
+                alt="EXERCISE"></button>
+
+    </div>
+    <div class="login" id="login">
+        <div id="loginForm">
+            <label for="loginEmail">Email Address:</label><br>
+            <input type="text" id="loginEmail" name="email"><br>
+            <label for="loginPassword">Password:</label><br>
+            <input type="password" id="loginPassword" name="password">
+            <button onclick="clientLogin()">Login</button>
+            <button onclick="registerButton()">Register</button>
+            <div class="popup" id="loginPopup">
+                <p class="feedback" id="loginError"></p>
+            </div>
+        </div>
+        <div id="loggedIn"></div>
+    </div>
+
+</header>
+
+<div id="mainBody">
+    <div class="timeline" id="timeline">
+
+    </div>
+    <div class="register hide" id="register">
+        <p>Fields with <span class="required">*</span> are required</p>
+        <div>
+            <label for="firstName">First name:</label><span class="required">*</span>
+            <input type="text" placeholder="First name" id="firstName" name="firstName" required="required"><br>
+        </div>
+        <div>
+            <label for="surname">Surname:</label><span class="required">*</span>
+            <input type="text" placeholder="Surname" id="surname" name="surname" required="required"><br>
+        </div>
+        <div>
+            <label for="registerEmail">Email Address:</label><span class="required">*</span>
+            <input type="email" placeholder="Email Address" id="registerEmail" name="email" required="required"><br>
+            <div class="popup" id="popup1">
+                <p class="feedback" id="emailError"> ""</p>
+            </div>
+        </div>
+        <div>
+            <label for="registerPassword">Password:</label><span class="required">*</span>
+            <input type="password" placeholder="Password" id="registerPassword" name="passwrd" required="required">
+            <div class="popup" id="popup2">
+                <p class="feedback" id="passwordError">""</p>
+            </div>
+        </div>
+
+        <div id="registerFile">
+            <input type="file" id="registerPic" name="myFile">
+        </div>
+        <button id="registerButton" name="register" onclick="clientRegister()">Create Account</button>
+    </div>
+</div>
+<div class="exerciseTab hide" id="exerciseTab">
+    <div class="hide" id="startExercise">
+        <p>Record Exercise</p>
+        <button onclick="startExercise()">Start!</button>
+    </div>
+
+    <div class="notLoggedIn hide" id="notLoggedInExercise">
+        <p>You must be logged in to record an exercise!</p>
+    </div>
+    <div class="hide" id="currentExercise">
+        <div class="exerciseText">
+            <p>Time: </p>
+            <p>Distance: </p>
+        </div>
+        <div class="exerciseText">
+            <p id="timer">0:00</p>
+            <p id="distance">0.00 km</p>
+        </div>
+        <div id="exerciseButtons">
+            <button onclick="cancelExercise()">Cancel</button>
+            <button onclick="finishExercise()">Finish</button>
+        </div>
+    </div>
+    <div class="hide" id="finaliseExercise">
+        <div>
+            <label for="exerciseTitle">Title</label>
+            <input type="text" placeholder="Write a title for your run here..." id="exerciseTitle"
+                name="exerciseTitle"><br>
+        </div>
+        <div>
+            <label for="exerciseDescription">Description</label>
+            <input type="text" placeholder="Write a description for your run here..." id="exerciseDescription"
+                name="exerciseDescription"><br>
+        </div>
+        <div>
+            <label for="exercisePicUpload">Upload picture</label>
+            <input type="file" id="exercisePicUpload" name="myFile">
+        </div>
+        <button id='finaliseButton'>Submit</button>
+
+    </div>
+
+</div>
+
+<div class="serverResponse hide" id="serverResponse">
+
+</div>
+
+<footer>
+
+    <!-- social media icons with links to respective pages -->
+    <div class="socials">
+        <a href="https://www.facebook.com" target="_blank"><img src="../images/facebookLogo.png" alt="FACEBOOK"></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="../images/instagramLogo.png" alt="INSTAGRAM"></a>
+        <a href="https://www.twitter.com" target="_blank"><img src="../images/twitterLogo.png" alt="TWITTER"></a>
+        <a href="https://www.linkedin.com" target="_blank"><img src="../images/linkedinLogo.png" alt="LINKEDIN"></a>
+    </div>
+
+    <!-- small text at the bottom with privacy and copyright details -->
+    <div class="policies">
+        <p>Privacy Policy</p>
+        <p>Sitemap</p>
+        <p>© 2021 Uni Project</p>
+    </div>
+
+</footer>
+
+</body>
+
+</html>
